@@ -20,16 +20,16 @@ const CANCEL_AUTHORIZATION_TYPEHASH = web3.utils.keccak256(
 );
 
 describe("EIP3009", () => {
-  let deployer: Wallet;
   let alice: Wallet;
   let bob: Wallet;
   let charlie: Wallet;
+  let deployer: Wallet;
   const keys = {} as { [address: string]: string };
   before(async () => {
-    [deployer, alice, bob, charlie] = ACCOUNTS_AND_KEYS.map(
+    [alice, bob, charlie, deployer] = ACCOUNTS_AND_KEYS.map(
       (x) => new ethers.Wallet(x.key, ethers.provider)
     );
-    [deployer, alice, bob, charlie].map(
+    [alice, bob, charlie, deployer].forEach(
       (x, i) => (keys[x.address] = ACCOUNTS_AND_KEYS[i].key)
     );
   });
