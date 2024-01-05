@@ -1,0 +1,15 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "test": "npx hardhat test",
+    "test:sandverse": "npx hardhat test --network sandverse",
+    "test:localhub": "npx hardhat test --network localhub",
+    "test:localverse": "npx hardhat test --network localverse"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@openzeppelin/contracts": "^3.2.0",
+    "hardhat": "^2.19.4",
+    "web3": "^4.3.0"
+  }
+}
